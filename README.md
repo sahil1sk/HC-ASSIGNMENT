@@ -15,6 +15,9 @@
 
 Here are some screenshots of the application:
 
+### 🏠 Login Page
+![Login Page](images/login.png)
+
 ### 🏠 Home Page
 ![Home Page](images/homepage.png)
 
