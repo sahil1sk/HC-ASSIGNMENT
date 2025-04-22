@@ -1,0 +1,4 @@
+<div class="flex flex-col lg:flex-row flex-1 p-4">
+    <app-user-list (userSelected)="selectedUser = $event" class="w-full"></app-user-list>
+    <app-user-profile [user]="selectedUser" class="w-full"></app-user-profile>
+</div>

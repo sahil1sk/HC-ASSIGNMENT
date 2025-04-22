@@ -1,0 +1,20 @@
+<div class="border p-4" *ngIf="!users.isLoading()">
+  <h2 class="text-lg font-bold">Users</h2>
+  
+  @let error = users.error();
+  @if (error) {
+    <p>{{ error }}</p>
+  }
+
+  <mat-list class="border rounded overflow-y-auto h-60">
+    <mat-list-item class="cursor-pointer hover:bg-gray-100 px-2 py-1 border-b border-gray-300" *ngFor="let user of users.value();" (click)="selectUser(user)">
+      {{ user.name }}
+    </mat-list-item>
+  </mat-list>
+</div>
+
+<div *ngIf="users.isLoading()" class="flex justify-center items-center">
+  <mat-spinner></mat-spinner>
+</div>
+
+    

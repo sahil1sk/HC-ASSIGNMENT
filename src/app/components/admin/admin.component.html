@@ -1,0 +1,21 @@
+<div class="p-8 text-center">
+    <h1 class="text-3xl font-bold text-gray-800 mb-4">Admin Dashboard</h1>
+    <p class="text-gray-600 mb-6">Welcome, Admin: {{ authService.currentUser()?.email }}</p>
+
+    <div class="flex flex-col h-screen">
+        <div class="bg-white p-2 flex items-center">
+          <mat-tab-group class="w-full" [selectedIndex]="1">
+            <mat-tab class="p-10" label="Home">
+              <app-home></app-home>
+            </mat-tab>
+            <mat-tab class="p-10" label="Users">
+              <app-user></app-user>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      
+        <div class="p-4 border text-sm text-gray-500">
+          (c) 2025
+        </div>
+      </div>
+</div>
